@@ -26,7 +26,7 @@ c_vec=np.array([0.0,0.0,c_len])
 
 #definitions of Q-vectors
 #q-vectorはreciprocal lattice unit (a*, b*, c*のunit)で書くようにしましょう。a*を掛け算する必要はないです。
-q_len = 0.34 #=qa*=0.226*1.51812
+q_len = 0.15 #=qa*=0.226*1.51812
 Q1=np.array([q_len,0.0,0.0])
 Q2=np.array([0.0,q_len,0.0])
 
@@ -68,7 +68,7 @@ for ii in range(points_x):
         SB1_vec=np.array([0,1,0])
         SA2_vec=np.array([0,0,-1])
         SB2_vec=np.array([-1,0,0])
-        Mz=0.47#2가 되면 스킬미온이 아니게됨. 스핀적분이 4pi가 되도록하려면..? 계산할 수도 있지만, 1(?)~1.9정도쯤 중앙부가 나오고 메론-안티메론상태가 없어지도록 해야함. 0일땐 제로자기장이라서 스킬미온이 아닌 메론-안티메론 상태가 됨.(IC-1)
+        Mz=0.1#2가 되면 스킬미온이 아니게됨. 스핀적분이 4pi가 되도록하려면..? 계산할 수도 있지만, 1(?)~1.9정도쯤 중앙부가 나오고 메론-안티메론상태가 없어지도록 해야함. 0일땐 제로자기장이라서 스킬미온이 아닌 메론-안티메론 상태가 됨.(IC-1)
         Sz_vec=np.array([0,0,Mz])
         S1=np.cos(phase1)*SA1_vec+np.sin(phase1)*SB1_vec #a direction? or a* direction?
         S2=np.cos(phase2)*SA2_vec+np.sin(phase2)*SB2_vec
