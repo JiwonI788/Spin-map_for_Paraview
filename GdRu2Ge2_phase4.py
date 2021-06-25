@@ -74,12 +74,12 @@ for ii in range(points_x):
         SA2_vec=np.array([0,0,-1])
         SB2_vec=np.array([-1,0,0])
         SA3_vec=np.array([0,0,-1])
-        SB3_vec=np.array([1,-1,0])/math.sqrt(2)
+        SB3_vec=np.array([-1,1,0])/math.sqrt(2)
         SA4_vec=np.array([0,0,-1])
-        SB4_vec=np.array([-1,-1,0])/math.sqrt(2)
+        SB4_vec=np.array([1,1,0])/math.sqrt(2)
 
 
-        Mz=0#2가 되면 스킬미온이 아니게됨. 스핀적분이 4pi가 되도록하려면..? 계산할 수도 있지만, 1(?)~1.9정도쯤 중앙부가 나오고 메론-안티메론상태가 없어지도록 해야함. 0일땐 제로자기장이라서 스킬미온이 아닌 메론-안티메론 상태가 됨.(IC-1)
+        Mz=0.43#2가 되면 스킬미온이 아니게됨. 스핀적분이 4pi가 되도록하려면..? 계산할 수도 있지만, 1(?)~1.9정도쯤 중앙부가 나오고 메론-안티메론상태가 없어지도록 해야함. 0일땐 제로자기장이라서 스킬미온이 아닌 메론-안티메론 상태가 됨.(IC-1)
         Sz_vec=np.array([0,0,Mz])
         S1=np.cos(phase1)*SA1_vec/3.464+2.464/3.464*np.sin(phase1)*SB1_vec #a direction? or a* direction?
         S2=np.cos(phase2)*SA2_vec/3.464+2.464/3.464*np.sin(phase2)*SB2_vec
